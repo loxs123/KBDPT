@@ -1,0 +1,21 @@
+python main.py --model_name LongFormerPrompt \
+               --gpu 0 \
+               --bert_path IDEA-CCNL/Erlangshen-Longformer-110M \
+               --test_freq 10 \
+               --data_path data/chinese \
+               --embedding_dim 768 \
+               --data_loader DataLoader_prompt_front \
+               --max_length 1024 \
+               --dropout_rate 0.5 \
+               --epochs 40 \
+               --batch_size 12 \
+               --bert_lr 1e-5 \
+               --other_lr 5e-4 \
+               --warmup_rate 0.3 \
+               --patience 5 \
+               --seed 2 \
+               --data_version 2 \
+               --result_path result \
+               --accumulation_steps 1 \
+               --label_smooth_lambda 0.0 \
+               --hidden_size 768
